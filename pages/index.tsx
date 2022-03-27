@@ -21,6 +21,8 @@ import Avatar from "@mui/material/Avatar";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import OutlinedInput from "@mui/material/OutlinedInput";
+import InputAdornment from "@mui/material/InputAdornment";
+import { IconButton } from "@mui/material";
 import { Divider } from "@mui/material";
 import {
   LocationOn,
@@ -30,6 +32,7 @@ import {
   Delete,
   Edit,
   Favorite,
+  Send,
 } from "@mui/icons-material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -134,6 +137,17 @@ export default function Home() {
                           multiline
                           fullWidth
                           sx={{ borderRadius: "50px" }}
+                          endAdornment={
+                            <InputAdornment position="end">
+                              <IconButton
+                                aria-label="save comment"
+                                // onClick={handleClickShowPassword}
+                                // onMouseDown={handleMouseDownPassword}
+                              >
+                                <Send />
+                              </IconButton>
+                            </InputAdornment>
+                          }
                         />
                       </Grid>
                     </Grid>
